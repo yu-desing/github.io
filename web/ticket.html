@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>チケット購入｜これ、いらんやろ展</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="wrapper ticket-bg">
+
+    <!-- タイトル -->
+    <img src="img/title_ticket.png" class="block">
+
+    <!-- 展覧会情報 -->
+    <img src="img/ticket_info.png" class="block">
+
+    <!-- 大人料金 -->
+    <div class="ticket-row">
+      <img src="img/price_adult.png" class="block">
+
+      <div class="count-box">
+        <button class="count-btn" id="adult-minus">−</button>
+        <span class="count-num" id="adult-count">0</span>
+        <button class="count-btn" id="adult-plus">＋</button>
+      </div>
+    </div>
+
+    <!-- 子供料金 -->
+    <div class="ticket-row">
+      <img src="img/price_child.png" class="block">
+
+      <div class="count-box">
+        <button class="count-btn" id="child-minus">−</button>
+        <span class="count-num" id="child-count">0</span>
+        <button class="count-btn" id="child-plus">＋</button>
+      </div>
+    </div>
+
+    <!-- メールアドレス -->
+    <img src="img/mail_title.png" class="block">
+
+    <input
+      type="email"
+      class="mail-input"
+      placeholder="example@email.com"
+      required
+    >
+
+    <!-- 合計金額 -->
+    <p class="total-price" id="total">合計 ¥0</p>
+
+    <!-- 購入ボタン -->
+    <a href="thanks.html" class="cta">
+      <img src="img/buy_btn.png" class="block tap-btn">
+    </a>
+
+  </div>
+
+  <!-- JSはbodyの一番下！ -->
+  <script>
+    let adultCount = 0;
+    let childCount = 0;
+
+    const adultPrice = 1500;
+    const childPrice = 1000;
+
+    const adultCountEl = document.getElementById("adult-count");
+    const childCountEl = document.getElementById("child-count");
+    const totalEl = document.getElementById("total");
+
+    function updateTotal() {
+      adultCountEl.textContent = adultCount;
+      childCountEl.textContent = childCount;
+      totalEl.textContent =
+        "合計 ¥" + (adultCount * adultPrice + childCount * childPrice);
+    }
+
+    document.getElementById("adult-plus").onclick = () => {
+      adultCount++;
+      updateTotal();
+    };
+
+    document.getElementById("adult-minus").onclick = () => {
+      if (adultCount > 0) adultCount--;
+      updateTotal();
+    };
+
+    document.getElementById("child-plus").onclick = () => {
+      childCount++;
+      updateTotal();
+    };
+
+    document.getElementById("child-minus").onclick = () => {
+      if (childCount > 0) childCount--;
+      updateTotal();
+    };
+
+    updateTotal();
+
+  </script>
+
+</body>
+</html>
