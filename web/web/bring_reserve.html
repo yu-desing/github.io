@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>持ち込み予約｜これ、いらんやろ展</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="wrapper ticket-bg">
+
+    <!-- タイトル -->
+    <img src="img/bring_reserve_title.png" class="block title-img">
+
+    <!-- 説明 -->
+    <p class="reserve-note">
+      下記の内容をご入力ください。
+    </p>
+
+    <form action="bring_thanks.html">
+
+        <a href="#">
+            <img src="img/yoyaku_title.png" class="block tap-btn">
+        </a>
+
+      <!-- 名前 -->
+      <input
+        type="text"
+        class="form-input"
+        placeholder="お名前"
+        required
+      >
+
+      <!-- メール -->
+      <input
+        type="email"
+        class="form-input"
+        placeholder="メールアドレス"
+        required
+      >
+
+      <!-- 展示物の名前 -->
+      <input
+        type="text"
+        class="form-input"
+        placeholder="展示物の名前"
+        required
+      >
+
+      <!-- 展示物の内容 -->
+      <textarea
+        class="form-textarea"
+        placeholder="展示物の内容をご入力ください"
+        rows="4"
+      ></textarea>
+
+      <!-- 返却の有無 -->
+      <div class="return-box">
+        <p class="return-title">展示後の返却</p>
+
+        <label>
+          <input type="radio" name="return" required>
+          返却を希望する
+        </label>
+
+        <label>
+          <input type="radio" name="return">
+          返却を希望しない
+        </label>
+      </div>
+
+      <a href="bring_thanks.html" class="cta">
+      <img src="img/yoyaku_btn.png" class="block tap-btn">
+    </a>
+
+    </form>
+
+  </div>
+
+</body>
+</html>

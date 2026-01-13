@@ -1,0 +1,310 @@
+/* リセット */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ページ全体 */
+body {
+  background: #000;
+  
+}
+
+/* XDアートボード再現 */
+.wrapper {
+  width: 390px;
+  margin: 0 auto;
+  background: url("img/bp.png") repeat;
+  background-attachment: local;
+  font-size: 0;
+  box-shadow: 0 0 20px rgba(0,0,0,0.4);
+}
+
+/* 画像ブロック */
+.block {
+  width: 100%;
+  display: block;
+  height: auto;
+  margin-bottom: -50px;
+}
+
+/* クリック画像 */
+.cta {
+  display: block;
+  margin-top: -4px;
+}
+
+.cta img {
+  transition: transform 0.15s ease, filter 0.15s ease;
+}
+
+.cta:hover img {
+  filter: brightness(0.95);
+}
+
+.cta:active img {
+  transform: translateY(3px);
+  filter: brightness(0.9);
+}
+
+.section {
+  margin-top: -20px; /* ← ここが調整ポイント */
+}
+
+img[src*="ticket_btn"],
+img[src*="contact_btn"] {
+  margin-top: -125px;
+}
+
+.tap-btn {
+  width: 80%;
+  margin: 0 auto;
+}
+
+
+.price-select {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin: 16px 0;
+}
+
+.price-btn {
+  padding: 0;
+  border: none;
+  background: none;
+}
+
+.price-btn.selected {
+  outline: 2px solid #000;
+}
+
+.mail-input {
+  width: 85%;
+  margin: 20px auto;   /* ← 横中央 */
+  display: block;
+  text-align: center; /* ← 入力文字も中央 */
+
+  background-color: #d8c9a3;   /* ダンボール系ベージュ */
+  border: 2px solid #9b8456;   /* 濃い茶色のフチ */
+  border-radius: 4px;
+
+  color: #4b3a1f;              /* 文字色も茶系 */
+  font-size: 14px;
+  padding: 10px;
+
+  outline: none;
+}
+
+
+.count-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  margin: 20px 0;
+
+    gap: 8px;
+  margin-bottom: 8px;
+}
+
+.count-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: none;
+}
+
+.count-num {
+  color: #4b3a1f;   /* ダンボール系こげ茶 */
+  font-size: 16px;
+  min-width: 24px;
+  text-align: center;
+}
+
+.total-price {
+  display: block;
+  color: #4b3a1f;        /* ダンボール濃茶 */
+  font-size: 16px;
+  text-align: center;
+  margin: 16px 0;
+}
+
+.mail-box {
+  display: flex;
+  justify-content: center;
+  margin: 16px 0 24px;
+}
+
+.mail-input {
+  width: 80%;
+  height: 40px;
+  padding: 0 12px;
+}
+
+
+.message-input {
+  width: 85%;
+  margin: 16px auto;
+  display: block;
+  padding: 10px;
+
+  background-color: #d8c9a3;
+  border: 2px solid #9b8456;
+  border-radius: 4px;
+
+  color: #4b3a1f;
+  font-size: 14px;
+  resize: none; /* サイズ変更不可 */
+}
+
+.message-input::placeholder {
+  color: #7a6a4a;
+}
+
+.wrapper.ticket-bg .contact-head {
+  margin-bottom: -100px;
+}
+
+.wrapper.ticket-bg .contact-head img {
+  margin-bottom: 50px; /* 次との余白はここで調整 */
+}
+
+.title-img {
+  margin: 0 auto;
+  display: block;
+  margin-top: -40px;
+}
+
+img {
+  vertical-align: bottom;
+}
+
+
+  .text-img {
+  width: 80%;      /* ← 少し小さく（80〜90%で微調整してOK） */
+  margin: -50px auto 0; /* ← 上に持ち上げる */
+  display: block;
+}
+ 
+
+
+.thanks-box {
+  text-align: center;
+  margin: 30px 0;
+  animation: fadeIn 0.6s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.thanks-box {
+  font-size: 14px;
+}
+
+.thanks-text {
+  line-height: 1.8
+;
+}
+
+/* =====================
+   お問い合わせ ありがとう画面
+===================== */
+
+.thanks-bg {
+  padding: 32px 0 40px;
+}
+
+/* タイトル画像 */
+.thanks-title {
+  width: 70%;
+  margin: 0 auto 12px;
+  display: block;
+}
+
+/* 説明文 */
+.thanks-text {
+  width: 85%;
+  margin: 0 auto 24px;
+  display: block;
+}
+
+/* 戻るボタン */
+.tap-btn {
+  width: 80%;
+  margin: 0 auto;
+  display: block;
+}
+
+.thanks-text {
+  width: 90%;   /* ← 今より大きく（85% → 90% とか） */
+  margin: 0 auto 24px;
+  display: block;
+}
+
+/* 説明文＋注意事項をまとめたブロック */
+.bring-text {
+  margin-top: 8px;
+  margin-bottom: 24px;
+}
+
+/* 説明文 */
+.text-img {
+  margin-bottom: 6px;
+}
+
+/* 注意事項 */
+.notice-img {
+  margin-top: 0;
+}
+
+.tap-btn {
+  width: 80%;
+  margin: 0 auto;
+  display: block;
+}
+
+.form-input,
+.form-textarea {
+  width: 90%;
+  margin: 10px auto;
+  padding: 12px;
+  display: block;
+  font-size: 14px;
+  border: 1px solid #999;
+  background: #f3efe3; /* ダンボールっぽい */
+}
+
+.form-textarea {
+  resize: none;
+}
+
+.return-box {
+  width: 90%;
+  margin: 16px auto;
+  font-size: 14px;
+}
+
+.return-title {
+  margin-bottom: 6px;
+}
+
+.submit-btn {
+  width: 70%;
+  margin: 20px auto;
+  padding: 12px;
+  display: block;
+  border: none;
+  background: #000;
+  color: #fff;
+  font-size: 14px;
+}
