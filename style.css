@@ -250,3 +250,61 @@ img {
   margin: 0 auto 24px;
   display: block;
 }
+
+/* 説明文＋注意事項をまとめたブロック */
+.bring-text {
+  margin-top: 8px;
+  margin-bottom: 24px;
+}
+
+/* 説明文 */
+.text-img {
+  margin-bottom: 6px;
+}
+
+/* 注意事項 */
+.notice-img {
+  margin-top: 0;
+}
+
+.tap-btn {
+  width: 80%;
+  margin: 0 auto;
+  display: block;
+}
+
+.form-input,
+.form-textarea {
+  width: 90%;
+  margin: 10px auto;
+  padding: 12px;
+  display: block;
+  font-size: 14px;
+  border: 1px solid #999;
+  background: #f3efe3; /* ダンボールっぽい */
+}
+
+.form-textarea {
+  resize: none;
+}
+
+.return-box {
+  width: 90%;
+  margin: 16px auto;
+  font-size: 14px;
+}
+
+.return-title {
+  margin-bottom: 6px;
+}
+
+.submit-btn {
+  width: 70%;
+  margin: 20px auto;
+  padding: 12px;
+  display: block;
+  border: none;
+  background: #000;
+  color: #fff;
+  font-size: 14px;
+}
